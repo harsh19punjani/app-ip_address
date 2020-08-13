@@ -38,7 +38,8 @@ class IpAddress {
     // For more information, consult the Log Class guide on the Itential
     // Developer Hub https://developer.itential.io/ located
     // under Documentation -> Developer Guides -> Log Class Guide
-    log.info('Starting the IpAddress product.');
+    // log.info('Starting the IpAddress product.');
+
   }
    getFirstIpAddress(cidrStr, callback) {
 
@@ -65,8 +66,7 @@ class IpAddress {
     // Notice the destructering assignment syntax to get the value of the first array's element.
     [firstIpAddress] = cidr.toArray(options);
   }
-   if( firstIpAddress )
-    mappedAddress= getIpv4MappedIpv6Address(firstIpAddress);
+  
   // Call the passed callback function.
   // Node.js convention is to pass error data as the first argument to a callback.
   // The IAP convention is to pass returned data as the first argument and error
